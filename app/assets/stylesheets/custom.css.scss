@@ -16,3 +16,28 @@ $navbar-default-bg: orange;
 	color: red;
 	text-decoration: none;
 }
+
+.jumbotron{
+	background-image: asset-url('backimage.jpg');
+}
+
+.jumbotron h1{
+	color: yellow;
+}
+
+footer{
+	maring-top: 45px;
+	padding-top: 5px;
+	border-top: 1px solid green;
+	color: #777;
+
+}
+
+footer p1 {
+	float: left;
+}
+
+footer p2{
+	float: right;
+}
+
