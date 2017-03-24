@@ -1,0 +1,25 @@
+<h1> Showing this article</h1>
+
+<% if flash[:notice] %>
+	<p>
+	<%= flash[:notice] %>
+	</p>
+	
+<% end %>
+
+<p>Title: <%= @article.title %> </p>
+<br>
+
+<p>Description <%= @article.description %></p>
+
+<p>
+<%= link_to "  Edit this article ", edit_article_path %>	
+
+</p>
+
+<p>
+	
+
+<%= link_to " < Back to articles LIST ", articles_path %>
+	
+</p>
