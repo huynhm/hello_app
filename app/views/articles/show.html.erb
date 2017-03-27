@@ -1,25 +1,22 @@
-<h1> Showing this article</h1>
 
-<% if flash[:notice] %>
-	<p>
-	<%= flash[:notice] %>
-	</p>
+<h2 align='center'> Title: <%= @article.title %> </h2>
+	<div class='well col-xs-8 col-xs-offset-2'>
+
+	<h4 class='center description'> <strong>Description</description></h4>
 	
-<% end %>
+	<%= simple_format(@article.description) %>
 
-<p>Title: <%= @article.title %> </p>
-<br>
+	<div class ='article-actions'>
 
-<p>Description <%= @article.description %></p>
+	<%= link_to "  Edit this article ", edit_article_path(@article), class: 'btn btn-xs btn-primary' %>	
+	<%= link_to "Delete this article", article_path(@article), method: :delete, data: {confirm: 'Are you sure you want to Delete?'}, class: 'btn btn-xs btn-danger' %>
+	<%= link_to " < Back to articles LIST ", articles_path, class: 'btn btn-xs btn-success' %>
+	</div>
 
-<p>
-<%= link_to "  Edit this article ", edit_article_path %>	
 
-</p>
 
-<p>
-	
 
-<%= link_to " < Back to articles LIST ", articles_path %>
-	
-</p>
+
+
+
+
